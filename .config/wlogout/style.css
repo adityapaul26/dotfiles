@@ -1,0 +1,65 @@
+@import "colors.css";
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	/* Using your @background variable with transparency */
+	background-color: alpha(@background, 0.90);
+}
+
+button {
+	border-radius: 10px;
+    margin: 5px;
+	/* Replaced #89b4fa with @primary (Blue-ish accent) */
+	border-color: @primary;
+	
+	/* Replaced #cdd6f4 with @on_surface (Main text color) */
+	text-decoration-color: @on_surface;
+	color: @on_surface;
+	
+	/* Replaced #181825 with @surface_container (Dark card background) */
+	background-color: @surface_container;
+	
+	border-style: solid;
+	border-width: 1px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+	/* Replaced static hover color with @surface_container_high (Lighter interaction state) */
+	background-color: @surface_container_high;
+	outline-style: none;
+    /* Optional: Add a glow on hover using your primary color */
+    box-shadow: 0 0 10px alpha(@primary, 0.3);
+}
+
+#lock {
+    background-image: url("/home/aditya/.config/wlogout/icons/lock.svg");
+}
+
+#logout {
+    background-image: url("/home/aditya/.config/wlogout/icons/logout.svg");
+}
+
+#suspend {
+    background-image: url("/home/aditya/.config/wlogout/icons/suspend.svg");
+}
+
+#hibernate {
+    background-image: url("/home/aditya/.config/wlogout/icons/hibernate.svg");
+}
+
+#shutdown {
+    /* background-color: @on_surface; */
+    background-image: url("/home/aditya/.config/wlogout/icons/bye-pika.png");
+}
+
+#reboot {
+    background-image: url("/home/aditya/.config/wlogout/icons/reboot.svg");
+}
+

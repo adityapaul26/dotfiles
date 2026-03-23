@@ -1,0 +1,23 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Adwaita";
+    font: "JetBrainsMono Nerd Font 12";
+    
+    /* Center the window */
+    location: 0;
+    
+    /* Better display names for the modes */
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Window";
+    
+    drun-display-format: "{name}";
+    
+    /* Cache settings you already had */
+    drun-use-desktop-cache: false;
+    drun-reload-desktop-cache: false;
+}
+
+@theme "~/.config/rofi/theme.rasi"
+

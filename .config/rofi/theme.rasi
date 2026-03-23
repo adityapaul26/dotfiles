@@ -1,0 +1,90 @@
+@import "~/.config/rofi/colors.rasi"
+
+* {
+    /* Use your JetBrains font */
+    font: "JetBrainsMono Nerd Font 12";
+    
+    /* General defaults */
+    background-color: transparent;
+    text-color:       @on-surface;
+    
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    width:          600px;
+    border-radius:  12px;
+    
+    /* Background from your colors.rasi */
+    background-color: @surface;
+    
+    /* Border settings */
+    border:         2px;
+    border-color:   @outline-variant;
+}
+
+mainbox {
+    padding:    20px;
+    children:   [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @surface-container;
+    border-radius:    8px;
+    padding:          12px;
+    margin:           0 0 12px 0;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @primary;
+    padding:    0 10px 0 0;
+}
+
+entry {
+    placeholder:       "Search...";
+    placeholder-color: @on-surface-variant;
+    text-color:        @on-surface;
+}
+
+listview {
+    lines:      8;
+    columns:    1;
+    spacing:    4px;
+}
+
+element {
+    padding:       10px;
+    border-radius: 8px;
+    children:      [ element-icon, element-text ];
+    spacing:       10px;
+}
+
+element-icon {
+    size: 24px;
+}
+
+/* --- THE FIX IS HERE --- */
+element-text {
+    vertical-align: 0.5;
+    /* This ensures text takes the color of its parent (selected or not) */
+    text-color:     inherit; 
+}
+
+/* Normal Item State */
+element normal.normal {
+    background-color: transparent;
+    text-color:       @on-surface;
+}
+
+/* Selected Item State */
+element selected.normal, element selected.active {
+    /* Your Primary Blue Background */
+    background-color: @primary; 
+    
+    /* Your Dark Text for Contrast */
+    text-color:       @on-primary; 
+}
+/* ----------------------- */

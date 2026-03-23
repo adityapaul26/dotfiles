@@ -1,0 +1,12 @@
+# MythSh Configuration
+
+# Theme options: graphic, mini
+theme = graphic
+
+# Prompt style presets: 
+#  - modern:  (Powerline style)
+#  - clean:   user@host dir git >
+#  - minimal: dir git >
+#  - retro:   [user@host dir]$
+style = modern
+

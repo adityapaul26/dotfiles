@@ -1,0 +1,214 @@
+@import "colors.css"; 
+
+/* MOCHA PALETTE REMOVED 
+   Now using variables from colors.css (Matugen)
+*/
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+window#waybar {
+  /* Semi-transparent background using Matugen background color */
+  background-color: alpha(@background, 0.6); 
+  color: @on_surface;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 6px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* --- WORKSPACES --- */
+#workspaces {
+  background-color: transparent;
+  margin: 4px;
+}
+
+#workspaces button {
+  padding: 0px 10px;
+  margin: 4px 3px;
+  background-color: @surface_container;
+  color: @on_surface_variant;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button.active {
+  /* Gradient from Tertiary to Primary for dynamic accent look */
+  background: linear-gradient(135deg, @tertiary 0%, @primary 100%);
+  color: @on_primary;
+  min-width: 40px;
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+}
+
+#workspaces button:hover {
+  background-color: @surface_container_high;
+  color: @on_surface;
+  box-shadow: 0 2px 8px alpha(@tertiary, 0.3);
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  color: @on_error;
+}
+
+/* --- MODULES CONTAINER --- */
+#memory,
+#cpu,
+#custom-power,
+#battery,
+#backlight,
+#pulseaudio,
+#wireplumber,
+#network,
+#clock,
+#tray,
+#custom-updates,
+#custom-weather {
+  background-color: @surface_container;
+  color: @on_surface;
+  margin: 6px 3px;
+  padding: 2px 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* --- HOVER EFFECTS --- */
+#memory:hover,
+#cpu:hover,
+#battery:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#network:hover,
+#custom-power:hover {
+  background-color: @surface_container_high;
+  box-shadow: 0 2px 8px alpha(@primary, 0.2);
+}
+
+/* --- CUSTOM LOGO --- */
+#custom-logo {
+  color: @primary;
+  font-size: 22px;
+  padding-left: 10px;
+  padding-right: 14px;
+  margin-top: 2px;
+}
+
+/* --- CLOCK --- */
+#clock {
+  background: linear-gradient(135deg, @primary 0%, @secondary 100%);
+  color: @on_primary;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* --- CPU --- */
+#cpu {
+  color: @tertiary;
+}
+
+/* --- MEMORY --- */
+#memory {
+  color: @secondary;
+}
+
+#memory.warning {
+  color: @error_container;
+}
+
+#memory.critical {
+  color: @error;
+}
+
+/* --- NETWORK --- */
+#network {
+  color: @primary;
+}
+
+#network.disconnected {
+  color: @error;
+}
+
+/* --- AUDIO --- */
+#pulseaudio,
+#wireplumber {
+  color: @secondary;
+}
+
+#wireplumber.muted {
+  color: @outline;
+  background-color: @surface_container_high;
+}
+
+/* --- BATTERY --- */
+#battery {
+  color: @primary;
+}
+
+#battery.charging {
+  color: @secondary;
+}
+
+#battery.warning:not(.charging) {
+  color: @tertiary;
+}
+
+#battery.critical:not(.charging) {
+  color: @error;
+  animation: critical-blink 0.8s ease-in-out infinite;
+}
+
+/* --- POWER BUTTON --- */
+#custom-power {
+  background: @error;
+  color: @on_error;
+  padding: 2px 14px;
+  margin-right: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* --- SYSTEM TRAY --- */
+#tray {
+  background-color: transparent;
+  padding: 0px 10px;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @error;
+}
+
+/* --- TOOLTIPS --- */
+tooltip {
+  background-color: @surface;
+  border-radius: 10px;
+  border: 1px solid @outline_variant;
+}
+
+tooltip label {
+  color: @on_surface;
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
+}

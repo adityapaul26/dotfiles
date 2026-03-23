@@ -1,0 +1,231 @@
+@import "colors.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: transparent; /* Entire bar is transparent */
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+/* Base style for all modules to make them look like floating pills */
+#workspaces,
+#memory,
+#cpu,
+#custom-power,
+#battery,
+#backlight,
+#pulseaudio,
+#wireplumber,
+#network,
+#clock,
+#tray,
+#custom-updates,
+#custom-weather,
+#custom-cava,
+#custom-playerinfo,
+#bluetooth,
+#custom-logo {
+  background-color: alpha(@surface_container_high, 0.85);
+  color: @on_surface;
+  margin: 5px 4px 0px 4px; /* Top margin to float */
+  padding: 4px 16px;
+  border-radius: 20px; /* Pill shape */
+  border: 1px solid alpha(@outline_variant, 0.5);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover effect for all interactive modules */
+#workspaces:hover,
+#memory:hover,
+#cpu:hover,
+#battery:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#network:hover,
+#custom-power:hover,
+#custom-cava:hover,
+#custom-playerinfo:hover,
+#bluetooth:hover,
+#clock:hover {
+  background-color: alpha(@surface_container, 0.95);
+  box-shadow: 0px 0px 12px alpha(@primary, 0.6);
+  border-color: @primary;
+}
+
+/* --- WORKSPACES --- */
+#workspaces {
+  padding: 2px 6px; /* tighter padding for workspace container */
+}
+
+#workspaces button {
+  padding: 0px 8px;
+  margin: 2px;
+  background-color: transparent;
+  color: @on_surface_variant;
+  border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy transition */
+}
+
+#workspaces button.active {
+  background: linear-gradient(45deg, @primary, @tertiary);
+  color: @on_primary;
+  min-width: 50px; /* Expands when active */
+  box-shadow: 0px 0px 10px alpha(@primary, 0.5);
+}
+
+#workspaces button:hover {
+  background-color: alpha(@on_surface, 0.1);
+  color: @on_surface;
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  color: @on_error;
+  animation: pulse 1s infinite alternate;
+}
+
+/* --- CUSTOM LOGO --- */
+#custom-logo {
+  color: @primary;
+  font-size: 18px;
+  padding: 4px 18px;
+  background: linear-gradient(120deg, alpha(@surface_container_high, 0.85), alpha(@surface_container, 0.85));
+}
+
+/* --- CLOCK --- */
+#clock {
+  color: @primary;
+  font-weight: 900;
+  background: linear-gradient(90deg, alpha(@surface_container_high, 0.85), alpha(@surface_container, 0.85));
+}
+
+/* --- CPU & MEMORY --- */
+#cpu {
+  color: @tertiary;
+}
+
+#memory {
+  color: @secondary;
+}
+
+/* --- CAVA --- */
+#custom-cava {
+  color: @primary;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+/* --- PLAYER INFO --- */
+#custom-playerinfo {
+  color: @tertiary;
+}
+
+/* --- NETWORK --- */
+#network {
+  color: @primary;
+}
+
+#network.disconnected {
+  color: @error;
+}
+
+/* --- AUDIO --- */
+#pulseaudio,
+#wireplumber {
+  color: @secondary;
+}
+
+#wireplumber.muted {
+  color: @outline;
+  text-decoration: line-through;
+}
+
+/* --- BLUETOOTH --- */
+#bluetooth {
+  color: @primary;
+}
+
+#bluetooth.off, #bluetooth.disabled {
+  color: @outline;
+}
+
+/* --- BATTERY --- */
+#battery {
+  color: @primary;
+}
+
+#battery.charging {
+  color: @secondary;
+  animation: charge-pulse 2s infinite alternate;
+}
+
+#battery.warning:not(.charging) {
+  color: #ff9800;
+}
+
+#battery.critical:not(.charging) {
+  color: @error;
+  box-shadow: 0px 0px 10px alpha(@error, 0.6);
+  animation: pulse 1s infinite alternate;
+}
+
+/* --- POWER BUTTON --- */
+#custom-power {
+  background-color: alpha(@error, 0.8);
+  color: @on_error;
+  border-color: @error;
+  padding: 4px 18px;
+  margin-right: 8px;
+}
+
+#custom-power:hover {
+  background-color: @error;
+  box-shadow: 0px 0px 15px @error;
+}
+
+/* --- SYSTEM TRAY --- */
+#tray {
+  padding: 0px 12px;
+}
+
+#tray > .needs-attention {
+  background-color: @error;
+  color: @on_error;
+}
+
+/* --- TOOLTIPS --- */
+tooltip {
+  background: alpha(@surface_container_high, 0.95);
+  border-radius: 12px;
+  border: 1px solid @primary;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+tooltip label {
+  color: @on_surface;
+  padding: 4px;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes pulse {
+    0% { box-shadow: 0px 0px 0px 0px alpha(@error, 0.7); }
+    100% { box-shadow: 0px 0px 15px 5px alpha(@error, 0); }
+}
+
+@keyframes charge-pulse {
+    0% { text-shadow: 0px 0px 2px @secondary; }
+    100% { text-shadow: 0px 0px 10px @secondary; }
+}
