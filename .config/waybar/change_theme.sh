@@ -2,7 +2,7 @@
 
 # 1. Set your wallpaper directory
 # VERIFY THIS PATH! In your previous messages, it was "$HOME/Pictures/Wallpapers/"
-DIR="$HOME/walls/"
+DIR="$HOME/shared/walls/"
 
 # 2. Find a random wallpaper
 # We capture the output. If directory is wrong, this will be empty.
@@ -15,7 +15,7 @@ if [ -z "$RANDOM_WALL" ]; then
 fi
 
 # 3. Apply Wallpaper
-swww img "$RANDOM_WALL" --transition-type grow --transition-fps 60
+awww img "$RANDOM_WALL" --transition-type grow --transition-fps 60
 
 # 4. Generate Colors (One line is safer)
 # I removed the backslashes to prevent errors.
