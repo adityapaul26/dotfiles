@@ -123,4 +123,8 @@ return {
     "mechatroner/rainbow_csv",
     ft = { "csv", "tsv" },
   },
+  {
+    "karb94/neoscroll.nvim",
+    opts = {},
+  },
 }

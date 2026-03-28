@@ -185,11 +185,3 @@ zle -N run_bimagic_widget
 bindkey '^b' run_bimagic_widget
 # END BIMAGIC
 
-# 2. YouTuber's Completion Logic
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-
-# 3. The Preview Window (Matches your screenshot)
-# This shows a preview of the directory contents when you hit TAB after 'cd'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'

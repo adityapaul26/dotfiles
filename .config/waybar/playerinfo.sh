@@ -21,7 +21,7 @@ else
     text="$artist - $title"
 fi
 
-maxlength=25
+maxlength=16
 
 # Truncate if too long
 if [ ${#text} -gt $maxlength ]; then
