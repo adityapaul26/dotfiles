@@ -123,8 +123,18 @@ return {
     "mechatroner/rainbow_csv",
     ft = { "csv", "tsv" },
   },
+  -- {
+  --   "karb94/neoscroll.nvim",
+  --   opts = {},
+  -- },
   {
     "karb94/neoscroll.nvim",
-    opts = {},
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      -- All these keys are optional, but this is a nice default
+      easing_function = "quintic", -- "linear", "quadratic", "cubic", "quintic"
+      hide_cursor = true,
+      stop_eof = true,
+    },
   },
 }
