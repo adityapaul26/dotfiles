@@ -1,0 +1,63 @@
+# ~/.config/yazi/yazi.toml
+[mgr]
+linemode = "size_and_mtime"
+[opener]
+# Web & Docs
+zen = [
+    { run = 'zen-browser "$@"', block = false, desc = "Zen Browser" },
+]
+# Text/Code
+edit = [
+    { run = '${EDITOR:-vi} "$@"', block = true, desc = "Editor" },
+]
+# Media
+play = [
+    { run = 'mpv "$@"', orphan = true, desc = "Play" },
+]
+# Images
+look = [
+    { run = 'imv "$@"', orphan = true, desc = "View Image" },
+]
+
+[open]
+rules = [
+    # 1. Documents & Web
+    { name = "*.pdf", use = "zen" },
+    { name = "*.html", use = "zen" },
+    { mime = "application/pdf", use = "zen" },
+
+    # 2. Images
+    { mime = "image/*", use = "look" },
+    { name = "*.svg", use = "look" },
+
+    # 3. Media (Video & Audio)
+    { mime = "video/*", use = "play" },
+    { mime = "audio/*", use = "play" },
+
+    # 4. Code & Text
+    # This covers JSON, Python, JS, C++, etc.
+    { mime = "text/*", use = "edit" },
+    { mime = "application/json", use = "edit" },
+    { mime = "application/javascript", use = "edit" },
+    { name = "*.lua", use = "edit" },
+    { name = "*.md", use = "edit" },
+    { name = "*.sh", use = "edit" },
+    
+    # 5. Data Science / Analytics (Common for Management/Research)
+    { name = "*.csv", use = "edit" },
+    { name = "*.ipynb", use = "edit" },
+
+    # 6. Archives
+    # This allows you to "open" a zip to extract it
+    { mime = "application/zip", use = "extract" },
+    { mime = "application/x-tar", use = "extract" },
+    { mime = "application/x-bzip2", use = "extract" },
+    { mime = "application/x-7z-compressed", use = "extract" },
+    { mime = "application/x-rar", use = "extract" },
+
+    # 7. Fallback (Always keep this at the bottom)
+    { name = "*", use = [ "open", "reveal" ] }
+]
+[preview]
+image_filter = "lanczos3"
+max_cache = "100M"
