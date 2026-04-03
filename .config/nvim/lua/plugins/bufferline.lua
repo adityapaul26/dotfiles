@@ -15,10 +15,15 @@ return {
   },
   opts = {
     options = {
-        -- stylua: ignore
-        close_command = function(n) Snacks.bufdelete(n) end,
-        -- stylua: ignore
-        right_mouse_command = function(n) Snacks.bufdelete(n) end,
+      mode = "buffers",
+      separator_style = "thin",
+      indicator = {
+        style = "underline",
+      },
+      -- stylua: ignore
+      close_command = function(n) Snacks.bufdelete(n) end,
+      -- stylua: ignore
+      right_mouse_command = function(n) Snacks.bufdelete(n) end,
       diagnostics = "nvim_lsp",
       always_show_bufferline = false,
       diagnostics_indicator = function(_, _, diag)
@@ -27,12 +32,18 @@ return {
           .. (diag.warning and icons.Warn .. diag.warning or "")
         return vim.trim(ret)
       end,
+      hover = {
+        enabled = true,
+        delay = 200,
+        reveal = { "close" },
+      },
       offsets = {
         {
           filetype = "neo-tree",
-          text = "Neo-tree",
+          text = "File Explorer",
           highlight = "Directory",
           text_align = "left",
+          separator = true,
         },
         {
           filetype = "snacks_layout_box",
