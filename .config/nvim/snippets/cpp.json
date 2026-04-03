@@ -2,6 +2,9 @@
     "CP Full Template": {
         "prefix": "cp",
         "body": [
+            "/*",
+            " * by - Aditya Paul",
+            "*/",
             "#include <bits/stdc++.h>",
             "using namespace std;",
             "",
