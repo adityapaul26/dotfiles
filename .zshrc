@@ -185,3 +185,19 @@ zle -N run_bimagic_widget
 bindkey '^b' run_bimagic_widget
 # END BIMAGIC
 
+
+# Fyzenor CWD Integration
+function f() {
+    local tmp
+    tmp="$(mktemp -t fyzenor-cwd.XXXXXX)" || return
+    fyzenor "$@" --cwd-file="$tmp"
+    if [ -f "$tmp" ]; then
+        local cwd
+        cwd=$(cat "$tmp")
+        rm -f -- "$tmp"
+        if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+            builtin cd -- "$cwd"
+        fi
+    fi
+}
+
