@@ -123,10 +123,6 @@ return {
     "mechatroner/rainbow_csv",
     ft = { "csv", "tsv" },
   },
-  -- {
-  --   "karb94/neoscroll.nvim",
-  --   opts = {},
-  -- },
   {
     "karb94/neoscroll.nvim",
     event = { "BufReadPre", "BufNewFile" },
@@ -136,5 +132,43 @@ return {
       hide_cursor = true,
       stop_eof = true,
     },
+  },
+  -- {
+  --   "lewis6991/gitsigns.nvim",
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   opts = {
+  --     current_line_blame = true,
+  --     current_line_blame_opts = {
+  --       virt_text = true,
+  --       virt_text_pos = "eol", -- 'eol' (end of line) or 'overlay'
+  --       delay = 500, -- Wait 500ms before showing blame
+  --       ignore_whitespace = false,
+  --     },
+  --     -- This formats the text just like you described
+  --     current_line_blame_formatter = " <author>, <author_time:%R> • <summary:-(40)>",
+  --   },
+  -- },
+  {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      current_line_blame = true,
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = "eol", -- 'eol' (end of line) or 'overlay'
+        delay = 500, -- Wait 500ms before showing blame
+        ignore_whitespace = false,
+      },
+      -- This formats the text just like you described
+      current_line_blame_formatter = " <author>, <author_time:%R> • <summary:-(40)>",
+    },
+    config = function(_, opts)
+      -- 1. Setup gitsigns with your opts
+      require("gitsigns").setup(opts)
+
+      -- 2. Override the highlight group
+      -- Set fg to pure white ('#cccccc'). You can also add `bold = true` or `italic = true`
+      vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#cccccc" })
+    end,
   },
 }
