@@ -36,7 +36,7 @@ return {
     -- UI: ROUNDED BORDERS
     completion = {
       documentation = {
-        auto_show = false,
+        auto_show = true,
         window = { border = "rounded" },
       },
       menu = { border = "rounded" },
