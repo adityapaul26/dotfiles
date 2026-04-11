@@ -171,4 +171,11 @@ return {
       vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#cccccc" })
     end,
   },
+  {
+    "nvzone/minty",
+    cmd = { "Shades", "Huefy" },
+    dependencies = {
+      { "nvzone/volt", lazy = true },
+    },
+  },
 }

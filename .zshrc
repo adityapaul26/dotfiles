@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -184,20 +184,4 @@ run_bimagic_widget() {
 zle -N run_bimagic_widget
 bindkey '^b' run_bimagic_widget
 # END BIMAGIC
-
-
-# Fyzenor CWD Integration
-function f() {
-    local tmp
-    tmp="$(mktemp -t fyzenor-cwd.XXXXXX)" || return
-    fyzenor "$@" --cwd-file="$tmp"
-    if [ -f "$tmp" ]; then
-        local cwd
-        cwd=$(cat "$tmp")
-        rm -f -- "$tmp"
-        if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-            builtin cd -- "$cwd"
-        fi
-    fi
-}
-
+    
