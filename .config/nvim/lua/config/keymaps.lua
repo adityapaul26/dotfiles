@@ -86,4 +86,17 @@ vim.keymap.set("n", "<leader>t", function()
   }):toggle()
 end, { desc = "Open Floating Terminal", noremap = true, silent = true })
 
+-- Open the Buffers switcher
+vim.keymap.set("n", "<leader>rb", function()
+  require("reach").buffers({
+    handle = "auto", -- Automatically assign letters/numbers to buffers
+    show_icons = true,
+    show_current = false, -- Hide the buffer you are currently looking at
+    show_modified = true,
+  })
+end, { desc = "Reach: Open Buffers" })
 
+-- Open the Marks switcher
+vim.keymap.set("n", "<leader>rm", function()
+  require("reach").marks({})
+end, { desc = "Reach: Open Marks" })

@@ -178,4 +178,16 @@ return {
       { "nvzone/volt", lazy = true },
     },
   },
+  {
+    "toppair/reach.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons", -- optional, but recommended for file icons
+    },
+    config = function()
+      -- Default setup
+      require("reach").setup({
+        notifications = true,
+      })
+    end,
+  },
 }
