@@ -1,30 +1,24 @@
 return {
   "saghen/blink.cmp",
-  dependencies = { "rafamadriz/friendly-snippets" },
+  dependencies = { "rafamadriz/friendly-snippets", "L3MON4D3/LuaSnip" },
   version = "1.*",
 
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
-    -- ========================================================================
-    -- KEYBINDINGS: PRESET = "SUPER-TAB"
-    -- ========================================================================
-    -- <Tab>       : 1. Accept completion (if menu open)
-    --               2. Jump to next snippet placeholder (if in snippet)
-    --               3. Indent/Tab (if no completion/snippet)
-    -- <S-Tab>     : 1. Select previous completion item
-    --               2. Jump to previous snippet placeholder
-    -- <C-space>   : Open completion menu / toggle documentation
-    -- <C-e>       : Hide/cancel completion menu
-    -- <Enter>     : Standard newline (does NOT accept completion)
-    -- <C-k>       : Toggle signature help (parameter hints)
-    -- <C-b> / <C-f>: Scroll documentation up/down
-    -- ========================================================================
-
-    keymap = { preset = "enter" },
+    -- ... existing keybindings comment ...
+    keymap = {
+      preset = "enter",
+      ["<Tab>"] = { "snippet_forward", "fallback" },
+      ["<S-Tab>"] = { "snippet_backward", "fallback" },
+    },
 
     appearance = {
       nerd_font_variant = "mono",
+    },
+
+    snippets = {
+      preset = "luasnip",
     },
 
     sources = {
