@@ -29,6 +29,9 @@ return {
 
     -- UI: ROUNDED BORDERS
     completion = {
+      ghost_text = {
+        enabled = true,
+      },
       documentation = {
         auto_show = true,
         window = { border = "rounded" },

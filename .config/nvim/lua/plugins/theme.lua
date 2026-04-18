@@ -111,6 +111,7 @@ return {
         borderless_telescope = false,
       })
       vim.cmd("colorscheme cyberdream")
+      vim.api.nvim_set_hl(0, "BlinkCmpGhostText", { fg = "#cccccc" })
     end,
   },
 }
