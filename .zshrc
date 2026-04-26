@@ -151,7 +151,7 @@ unset __conda_setup
 eval "$(pyenv init -)"
 
 #clean-up
-alias cleanall='echo "🧹 Cleaning System Caches..." && npm cache clean --force && pip cache purge && sudo pacman -Sc && yay -Sc && yay -Yc && e::cho "✨ All systems clean!"'
+alias cleanall='sudo rm -rf /var/cache/pacman/pkg/download-*; echo "🧹 Cleaning System Caches..." && npm cache clean --force && pip cache purge && sudo pacman -Sc && yay -Sc && yay -Yc && e::cho "✨ All systems clean!"'
 export PATH=~/.npm-global/bin:$PATH
 
 # Plugins

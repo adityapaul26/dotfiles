@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 require("config.lazy")
 vim.opt.clipboard = "unnamedplus"
-vim.opt.updatetime = 200 -- Lower this to 250ms or 300ms
+-- vim.opt.updatetime = 200 -- Lower this to 250ms or 300ms
 
 function RunCurrentFile()
   local file = vim.fn.expand("%:p")
