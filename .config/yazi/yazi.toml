@@ -1,6 +1,7 @@
 # ~/.config/yazi/yazi.toml
 [mgr]
 linemode = "size_and_mtime"
+
 [opener]
 # Web & Docs
 zen = [
@@ -22,13 +23,13 @@ look = [
 [open]
 rules = [
     # 1. Documents & Web
-    { name = "*.pdf", use = "zen" },
-    { name = "*.html", use = "zen" },
+    { url = "*.pdf", use = "zen" },
+    { url = "*.html", use = "zen" },
     { mime = "application/pdf", use = "zen" },
 
     # 2. Images
     { mime = "image/*", use = "look" },
-    { name = "*.svg", use = "look" },
+    { url = "*.svg", use = "look" },
 
     # 3. Media (Video & Audio)
     { mime = "video/*", use = "play" },
@@ -39,13 +40,13 @@ rules = [
     { mime = "text/*", use = "edit" },
     { mime = "application/json", use = "edit" },
     { mime = "application/javascript", use = "edit" },
-    { name = "*.lua", use = "edit" },
-    { name = "*.md", use = "edit" },
-    { name = "*.sh", use = "edit" },
+    { url = "*.lua", use = "edit" },
+    { url = "*.md", use = "edit" },
+    { url = "*.sh", use = "edit" },
     
     # 5. Data Science / Analytics (Common for Management/Research)
-    { name = "*.csv", use = "edit" },
-    { name = "*.ipynb", use = "edit" },
+    { url = "*.csv", use = "edit" },
+    { url = "*.ipynb", use = "edit" },
 
     # 6. Archives
     # This allows you to "open" a zip to extract it
@@ -56,8 +57,5 @@ rules = [
     { mime = "application/x-rar", use = "extract" },
 
     # 7. Fallback (Always keep this at the bottom)
-    { name = "*", use = [ "open", "reveal" ] }
+    { url = "*", use = [ "open", "reveal" ] }
 ]
-[preview]
-image_filter = "lanczos3"
-max_cache = "100M"
