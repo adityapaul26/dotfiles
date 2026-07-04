@@ -186,16 +186,5 @@ zle -N run_bimagic_widget
 bindkey '^b' run_bimagic_widget
 # END BIMAGIC
 
-# Fyzenor CWD Integration
-function f() {
-	local tmp="$(mktemp -t "fyzenor-cwd.XXXXXX")" cwd
-	fyzenor "$@" --cwd-file="$tmp"
-	if [ -f "$tmp" ]; then
-		cwd=$(cat "$tmp")
-		rm -f -- "$tmp"
-		if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-			builtin cd -- "$cwd"
-		fi
-	fi
-}
-
+# Added by Antigravity CLI installer
+export PATH="/home/aditya/.local/bin:$PATH"
