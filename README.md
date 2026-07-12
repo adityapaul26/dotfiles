@@ -1,99 +1,137 @@
-# Hyprland Configs 🚀
+# 🌌 Dotfiles: Arch + Hyprland + Fish
 
-Welcome to my personal Arch + Hyprland configuration repository. This setup is built for a clean, modern, and highly functional Wayland-based desktop experience on Linux.
+Welcome to my personal dotfiles repository! This setup is designed for a clean, modern, and highly functional Wayland-based desktop experience on Arch Linux, powered by **Hyprland** and optimized with the **Fish** shell.
 
-![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue?style=for-the-badge&logo=arch-linux)
-![Shell](https://img.shields.io/badge/Shell-Zsh-orange?style=for-the-badge&logo=zsh)
-![Terminal](https://img.shields.io/badge/Terminal-Kitty-red?style=for-the-badge&logo=kitty)
-![Editor](https://img.shields.io/badge/Editor-Neovim-green?style=for-the-badge&logo=neovim)
+<p align="center">
+  <img src="./2026-02-20-193343_hyprshot.png" alt="Hyprland Desktop Workspace" width="49%" />
+  <img src="./2026-07-11-003429_hyprshot.png" alt="Rofi Launcher & Styling" width="49%" />
+</p>
+
+---
+
+## 🎨 Badges
+
+<p align="center">
+  <a href="https://archlinux.org/"><img src="https://img.shields.io/badge/OS-Arch%20Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="OS: Arch Linux" /></a>
+  <a href="https://hyprland.org/"><img src="https://img.shields.io/badge/WM-Hyprland-39A7AC?style=for-the-badge&logo=hyprland&logoColor=white" alt="WM: Hyprland" /></a>
+  <a href="https://fishshell.com/"><img src="https://img.shields.io/badge/Shell-Fish-00A6FF?style=for-the-badge&logo=fish&logoColor=white" alt="Shell: Fish" /></a>
+  <a href="https://sw.kovidgoyal.net/kitty/"><img src="https://img.shields.io/badge/Terminal-Kitty-FC5656?style=for-the-badge&logo=kitty&logoColor=white" alt="Terminal: Kitty" /></a>
+  <a href="https://neovim.io/"><img src="https://img.shields.io/badge/Editor-Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white" alt="Editor: Neovim" /></a>
+</p>
+
+---
 
 ## ✨ Features
 
-- **Dynamic Theming**: Integrated with **Matugen** and `swww` for Material You-style color generation.
-  - Use the **arch logo** in the Waybar or run `~/.config/waybar/change_theme.sh` to cycle wallpapers from `~/walls/` and regenerate system-wide colors automatically.
-- **Eye Candy**: Optimized blur, rounded corners, and smooth animations using Hyprland's native effects.
-- **Custom Status Bar**: Highly customized **Waybar** with:
+- 🌈 **Dynamic Theming**: Integrated with **Matugen** and `swww` for Material You-style color generation. Click the Arch logo in Waybar or run `~/.config/waybar/change_theme.sh` to cycle wallpapers from `~/walls/` and regenerate system-wide colors automatically.
+- 👁️ **Eye Candy**: Optimized blur, rounded corners, shadows, and smooth spring animations using Hyprland's native effects.
+- 📊 **Custom Status Bar**: Highly customized **Waybar** featuring:
   - Custom workspace icons.
-  - Dynamic network and bluetooth status.
-  - Clickable modules for volume and theme switching.
-- **Productivity & Utilities**:
-  - **Neovim** (LazyVim based) for an IDE-like experience.
-  - **Tmux** for terminal multiplexing.
+  - Dynamic network and Bluetooth status.
+  - Clickable modules for volume, brightness, and theme switching.
+- ⚡ **Fish Shell Best Practices**:
+  - Fully modular Fish shell configuration split logically into `conf.d/` (`env`, `aliases`, `bindings`, `prompt`, `conda`).
+  - Native abbreviations (`abbr`) for instant interactive expansion and faster shell startup.
+  - Autoloaded custom functions (e.g., Yazi wrapper, clean-all tool).
+- 🛠️ **Productivity & Utilities**:
+  - **Neovim** (LazyVim based) configured for a full IDE-like experience.
+  - **Tmux** for terminal multiplexing and session persistence.
   - **SwayNC** for a modern notification center.
-  - **Battery Alert Script**: Automatic critical notifications when battery drops below 15%.
-- **Audio Visuals**: **Cava** configured with custom shaders for aesthetic music visualization.
+  - **Battery Alert Daemon**: Automatic notifications when battery drops below 15%.
+- 🎵 **Audio Visuals**: **Cava** configured with custom shaders for visualizer aesthetics.
 
-## 🛠️ Components
+---
 
-| Component                | Software                                                                                        |
-| :----------------------- | :---------------------------------------------------------------------------------------------- |
-| **Window Manager**       | [Hyprland](https://hyprland.org/)                                                               |
-| **Status Bar**           | [Waybar](https://github.com/Alexays/Waybar)                                                     |
-| **Terminal**             | [Kitty](https://sw.kovidgoyal.net/kitty/)                                                       |
-| **Shell**                | Zsh + [Starship](https://starship.rs/)                                                          |
-| **Application Launcher** | [Rofi](https://github.com/davatorium/rofi) (Wayland fork)                                       |
-| **Notifications**        | [SwayNC](https://github.com/ErikReider/SwayNotificationCenter)                                  |
-| **Locker / Idle**        | Hyprlock & Hypridle                                                                             |
-| **Wallpaper & Effects**  | [Swww](https://github.com/L_S_D/swww) & [Matugen](https://github.com/InSyncWithQueries/matugen) |
-| **File Manager**         | Dolphin                                                                                         |
-| **Audio Visualizer**     | Cava                                                                                            |
-| **OSD Control**          | SwayOSD                                                                                         |
+## 🛠️ Software Stack
+
+| Component | Software | Description |
+| :--- | :--- | :--- |
+| **Window Manager** | [Hyprland](https://hyprland.org/) | Dynamic tiling Wayland compositor |
+| **Status Bar** | [Waybar](https://github.com/Alexays/Waybar) | Customizable Wayland status bar |
+| **Terminal Emulator** | [Kitty](https://sw.kovidgoyal.net/kitty/) | GPU-accelerated terminal emulator |
+| **Shell** | [Fish](https://fishshell.com/) / Zsh | Modular Fish shell setup & Zsh fallback |
+| **App Launcher** | [Rofi-lbonn](https://github.com/lbonn/rofi) | Wayland-supported application launcher |
+| **Notification Daemon**| [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Simple Wayland notification center |
+| **Lockscreen & Idle** | [Hyprlock](https://github.com/hyprwm/hyprlock) / Hypridle | Fast and customizable locks and idle handlers |
+| **Wallpaper Daemon** | [Swww](https://github.com/L_S_D/swww) | Animated wallpaper daemon for Wayland |
+| **Theming Engine** | [Matugen](https://github.com/InSyncWithQueries/matugen) | Material You color generator |
+| **File Manager** | [Yazi](https://github.com/sxyazi/yazi) / Dolphin | Terminal file manager & GUI alternative |
+| **Audio Visualizer** | [Cava](https://github.com/karlstav/cava) | Console-based audio visualizer |
+
+---
 
 ## ⌨️ Keybindings
 
-The `SUPER` key is the main modifier.
+The `SUPER` key is mapped as the primary modifier.
 
-- `SUPER + Q`: Open Terminal (Kitty)
-- `SUPER + E`: File Manager (Dolphin)
-- `SUPER + R`: App Launcher (Rofi)
-- `SUPER + C`: Close Active Window
-- `SUPER + M`: Exit Hyprland
-- `SUPER + V`: Toggle Floating
-- `SUPER + X`: Notification Center
-- `PRINT`: Screenshot (Window)
-- `SHIFT + PRINT`: Screenshot (Region)
-- `SUPER + [1-0]`: Switch Workspaces
+| Keybinding | Action |
+| :--- | :--- |
+| `SUPER + Q` | Open Terminal (Kitty) |
+| `SUPER + E` | Open File Manager (Dolphin) |
+| `SUPER + R` | Open App Launcher (Rofi) |
+| `SUPER + C` | Close Active Window |
+| `SUPER + M` | Exit Hyprland session |
+| `SUPER + V` | Toggle Floating Mode |
+| `SUPER + X` | Open Notification Center (SwayNC) |
+| `PRINT` | Screenshot active window |
+| `SHIFT + PRINT` | Screenshot selected region |
+| `SUPER + [1-0]` | Switch to Workspace [1-10] |
+
+---
 
 ## 📁 Repository Structure
 
 ```text
 .
-├── hypr/           # Hyprland, Hyprlock, Hypridle, Hyprpaper
-├── waybar/         # Status bar config & custom scripts
-├── kitty/          # Terminal emulator styles
-├── matugen/        # Material You color templates
-├── nvim/           # Neovim (LazyVim) setup
-├── rofi/           # Application launcher themes
-├── swaync/         # Notification center config
-├── wlogout/        # Logout menu icons and style
-├── cava/           # Audio visualizer shaders and config
-└── .zshrc          # Shell configuration
+├── .config/
+│   ├── bimagic/      # Bimagic widget configuration
+│   ├── cava/         # Audio visualizer shaders and config
+│   ├── fastfetch/    # Fastfetch layouts
+│   ├── fish/         # Structured Fish shell configurations
+│   ├── hypr/         # Hyprland, Hyprlock, Hypridle configurations
+│   ├── kitty/        # Kitty styles and settings
+│   ├── matugen/      # Material You generation templates
+│   ├── nvim/         # Neovim (LazyVim) setup
+│   ├── rofi/         # Rofi menu styles and launcher theme
+│   ├── swaync/       # Notification center configurations
+│   ├── waybar/       # Waybar configuration and modules
+│   ├── wlogout/      # Logout menu configuration
+│   └── yazi/         # Yazi terminal file manager configuration
+├── tmux/             # Tmux configuration
+├── .zshrc            # Legacy/fallback Zsh config
+└── README.md         # This documentation
 ```
+
+---
 
 ## 🚀 Getting Started
 
-1. **Clone the repository**:
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/dotfiles.git ~/dotfiles
+```
 
-   ```bash
-   git clone https://github.com/your-username/hyprland-configs.git ~/.config/hyprland-configs
-   ```
+### 2. Install Dependencies
+Install Hyprland, Waybar, Rofi, Matugen, Swww, SwayNC, Cava, Fish shell, and other components using your system's package manager (e.g., `pacman` or `yay` on Arch Linux).
 
-2. **Install Dependencies**:
-   Ensure you have the software listed in the [Components](#-components) section installed.
+### 3. Deploy Configurations
 
-3. **Apply Configs**:
-   Link or copy the directories to your `~/.config/` folder.
+#### Option A: Deploy using GNU Stow (Recommended)
+This repository is configured out-of-the-box for [GNU Stow](https://www.gnu.org/software/stow/). Navigate to your dotfiles directory and stow the configs:
+```bash
+cd ~/dotfiles
+stow .
+```
 
-   ```bash
-   cp -r ~/.config/hyprland-configs/* ~/.config/
-   ```
+#### Option B: Deploy Manually
+If you prefer not to use Stow, you can copy the `.config` directory manually:
+```bash
+cp -r ~/dotfiles/.config/* ~/.config/
+cp ~/dotfiles/.zshrc ~/.zshrc
+```
 
-4. **Matugen Templates**:
-   The `matugen` folder contains templates to sync colors across apps. Run matugen on your wallpaper to generate the `colors.conf` files.
-
-## 📸 Screenshots
-
-<image src="./2026-02-20-193343_hyprshot.png"/>
-<image src="./2026-07-11-003429_hyprshot.png"/>
-
----
+### 4. Dynamic Theme Generation
+Matugen templates are ready in `~/.config/matugen/`. Run the wallpaper switcher utility script to build your color scheme:
+```bash
+~/.config/waybar/change_theme.sh
+```
