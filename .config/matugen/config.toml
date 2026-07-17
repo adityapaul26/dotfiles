@@ -41,7 +41,7 @@ output_path = "~/.config/bimagic/theme.wz"
 
 [templates.fyzenor]
 input_path = "~/.config/matugen/templates/fyzenor-colors.template"
-output_path = "~/.config/fyzenor/colors.fz"
+output_path = "~/.config/fyzenor/theme.toml"
 
 [templates.vesktop]
 input_path = '~/.config/matugen/templates/midnight-discord.css'
