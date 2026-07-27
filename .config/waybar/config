@@ -2,10 +2,10 @@
     "layer": "top",
     "position": "top",
     "spacing": 4,
-    "height": 34,
+    "height": 32,
     "margin-top": 5,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-left": 9,
+    "margin-right": 9,
     "modules-left": [
         "custom/logo",
         "hyprland/workspaces",
@@ -77,7 +77,7 @@
         "tooltip": false
     },
     "tray": {
-        "spacing": 10
+        "spacing": 6
     },
     "clock": {
     "format": "{:%H:%M}",
