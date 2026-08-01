@@ -28,4 +28,5 @@ if hl.plugin.hyprglass then
 	hg.layer("rofi", { preset = "liquid_glass" })
 	hg.layer("swayosd", { preset = "liquid_glass" })
 	hg.layer("debug-panel", { preset = "liquid_glass" })
+	hg.layer("quickshell", { preset = "liquid_glass" })
 end
