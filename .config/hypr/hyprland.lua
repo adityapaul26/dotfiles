@@ -15,8 +15,8 @@ package.path = config_dir .. "lua/?.lua;" .. package.path
 ---------------------------------------------------------------------------
 -- 1. Foundation (data modules, no side-effects)
 ---------------------------------------------------------------------------
-require("colors")      -- Material Design 3 palette
-require("variables")   -- $terminal, $fileManager, $menu, $mainMod
+require("colors") -- Material Design 3 palette
+require("variables") -- $terminal, $fileManager, $menu, $mainMod
 
 ---------------------------------------------------------------------------
 -- 2. Environment variables
@@ -57,3 +57,8 @@ require("keybinds")
 -- 9. Autostart (exec-once)
 ---------------------------------------------------------------------------
 require("execs")
+
+---------------------------------------------------------------------------
+-- 4.1 Hyprglass
+---------------------------------------------------------------------------
+require("hyprglass")
