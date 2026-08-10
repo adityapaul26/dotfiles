@@ -6,7 +6,7 @@
 hl.on("hyprland.start", function()
 	hl.exec_cmd("hyprpm reload -n")
 	-- hl.exec_cmd("waybar & swaync")
-	hl.exec_cmd("tide-island & swaync")
+	hl.exec_cmd("swaync")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("~/.config/waybar/battery-alert.sh")
 	hl.exec_cmd("hypridle")

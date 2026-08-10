@@ -103,7 +103,11 @@ window#waybar.hidden {
   color: @primary;
   font-size: 16px;
   padding: 3px 14px;
-  background: linear-gradient(120deg, alpha(@surface_container_high, 0.8), alpha(@surface_container, 0.8));
+  background: linear-gradient(
+    120deg,
+    alpha(@surface_container_high, 0.8),
+    alpha(@surface_container, 0.8)
+  );
 }
 
 /* --- CLOCK --- */
@@ -111,7 +115,11 @@ window#waybar.hidden {
   color: @primary;
   font-weight: 800;
   letter-spacing: 0.5px;
-  background: linear-gradient(90deg, alpha(@surface_container_high, 0.8), alpha(@surface_container, 0.8));
+  background: linear-gradient(
+    90deg,
+    alpha(@surface_container_high, 0.8),
+    alpha(@surface_container, 0.8)
+  );
 }
 
 /* --- CPU & MEMORY --- */
@@ -138,7 +146,11 @@ window#waybar.hidden {
   font-style: italic;
   font-weight: 500;
   letter-spacing: 0.3px;
-  background: linear-gradient(135deg, alpha(@surface_container_high, 0.8), alpha(@surface_container, 0.6));
+  background: linear-gradient(
+    135deg,
+    alpha(@surface_container_high, 0.8),
+    alpha(@surface_container, 0.6)
+  );
   border-color: alpha(@tertiary, 0.3);
 }
 
@@ -167,7 +179,8 @@ window#waybar.hidden {
   color: @primary;
 }
 
-#bluetooth.off, #bluetooth.disabled {
+#bluetooth.off,
+#bluetooth.disabled {
   color: @outline;
 }
 
@@ -221,7 +234,7 @@ tooltip {
   background: alpha(@surface_container_high, 0.95);
   border-radius: 10px;
   border: 1px solid alpha(@primary, 0.4);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 tooltip label {
@@ -232,11 +245,19 @@ tooltip label {
 
 /* --- ANIMATIONS --- */
 @keyframes pulse {
-    0%   { box-shadow: 0 0 0 0 alpha(@error, 0.6); }
-    100% { box-shadow: 0 0 12px 3px alpha(@error, 0); }
+  0% {
+    box-shadow: 0 0 0 0 alpha(@error, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 12px 3px alpha(@error, 0);
+  }
 }
 
 @keyframes charge-pulse {
-    0%   { text-shadow: 0 0 2px @secondary; }
-    100% { text-shadow: 0 0 8px @secondary; }
+  0% {
+    text-shadow: 0 0 2px @secondary;
+  }
+  100% {
+    text-shadow: 0 0 8px @secondary;
+  }
 }

@@ -11,7 +11,7 @@
 -- Lua module search path: look inside ./lua/ relative to this file
 local config_dir = debug.getinfo(1, "S").source:match("@?(.*/)") or "./"
 package.path = config_dir .. "lua/?.lua;" .. package.path
-
+local mainMod = "SUPER"
 ---------------------------------------------------------------------------
 -- 1. Foundation (data modules, no side-effects)
 ---------------------------------------------------------------------------
@@ -63,47 +63,57 @@ require("execs")
 ---------------------------------------------------------------------------
 require("hyprglass")
 
-hl.bind(
-	"SUPER + Tab",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call overview toggle")
-)
-hl.bind(
-	"SUPER + Right",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide swipeRight")
-)
-hl.bind(
-	"SUPER + Left",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide swipeLeft")
-)
-hl.bind(
-	"SUPER + Down",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide showClock")
-)
-hl.bind(
-	"SUPER + B",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide togglePlayer")
-)
-hl.bind(
-	"SUPER + C",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleControlCenter")
-)
-hl.bind(
-	"SUPER + N",
-	hl.dsp.exec_cmd(
-		"/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleNotificationCenter"
-	)
-)
-hl.bind(
-	"SUPER + W",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleWallpaperPicker")
-)
-hl.bind(
-	"SUPER + slash",
-	hl.dsp.exec_cmd(
-		"/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleApplicationLauncher"
-	)
-)
-hl.bind(
-	"SUPER + F",
-	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call island toggle")
-)
+-- hl.bind(
+-- 	"SUPER + Tab",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call overview toggle")
+-- )
+-- hl.bind(
+-- 	"SUPER + Right",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide swipeRight")
+-- )
+-- hl.bind(
+-- 	"SUPER + Left",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide swipeLeft")
+-- )
+-- hl.bind(
+-- 	"SUPER + Down",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide showClock")
+-- )
+-- hl.bind(
+-- 	"SUPER + B",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide togglePlayer")
+-- )
+-- hl.bind(
+-- 	"SUPER + C",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleControlCenter")
+-- )
+-- hl.bind(
+-- 	"SUPER + N",
+-- 	hl.dsp.exec_cmd(
+-- 		"/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleNotificationCenter"
+-- 	)
+-- )
+-- hl.bind(
+-- 	"SUPER + W",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleWallpaperPicker")
+-- )
+-- hl.bind(
+-- 	"SUPER + slash",
+-- 	hl.dsp.exec_cmd(
+-- 		"/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call tide toggleApplicationLauncher"
+-- 	)
+-- )
+-- hl.bind(
+-- 	"SUPER + F",
+-- 	hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call island toggle")
+-- )
+--
+hl.on("hyprland.start", function()
+	hl.exec_cmd("chillpill-shell")
+end)
+
+hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd("qs ipc -p /usr/share/chillpill-shell call controlCenter toggle"))
+hl.bind(mainMod .. " + CTRL + V", hl.dsp.exec_cmd("qs ipc -p /usr/share/chillpill-shell call cliphist toggle"))
+hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("qs ipc -p /usr/share/chillpill-shell call miniDashboard toggle"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("qs ipc -p /usr/share/chillpill-shell call appLauncher toggle"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("qs ipc -p /usr/share/chillpill-shell call wallpaperSwitcher toggle"))
