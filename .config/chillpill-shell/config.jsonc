@@ -2,7 +2,7 @@
   "displayPicture": "~/.pfp.png",
   "clockFormat": "hh:mm",
   "pillTopMargin": 9,
-  "pillBottomMargin": 38,
+  "pillBottomMargin": 32,
   "textFontFamily": "Monocraft",
   "nerdFontFamily": "JetBrainsMono Nerd Font Propo",
   "timerPresets": [1, 5, 10, 15, 30],
@@ -18,6 +18,6 @@
   "weatherRefreshInterval": 3600000,
   "avoidDuplicateNotifications": true,
   "defaultTerminal": "kitty",
-  "pillScale": 0.8,
+  "pillScale": 0.9,
   "wallpapersDir": "~/Pictures/wallpapers"
 }
