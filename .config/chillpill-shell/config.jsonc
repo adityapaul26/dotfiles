@@ -2,15 +2,21 @@
   "displayPicture": "~/.pfp.png",
   "clockFormat": "hh:mm",
   "pillTopMargin": 9,
-  "pillBottomMargin": 32,
+  "pillBottomMargin": 30,
   "textFontFamily": "Monocraft",
   "nerdFontFamily": "JetBrainsMono Nerd Font Propo",
-  "timerPresets": [1, 5, 10, 15, 30],
+  "timerPresets": [
+    1,
+    5,
+    10,
+    15,
+    30
+  ],
   "mediaPopupDuration": 2000,
   "maxWorkspaces": 5,
   "notificationDisplayTime": 3000,
   "maxNotificationsInStack": 20,
-  "bandwidthRefreshInterval": 300000,
+  "dataUsageRefreshInterval": 300000,
   "screenLockAppCommand": "hyprlock",
   "osdDuration": 800,
   "weatherLocation": "Kolkata",
@@ -18,6 +24,21 @@
   "weatherRefreshInterval": 3600000,
   "avoidDuplicateNotifications": true,
   "defaultTerminal": "kitty",
-  "pillScale": 0.9,
-  "wallpapersDir": "~/Pictures/wallpapers"
+  "pillScale": 1.2,
+  "dpiScale": 1.0,
+  "wallpapersDir": "~/Pictures/wallpapers",
+  "wsCloseOnWallpaperSet": true,
+  "wsAnimation": true,
+  "deleteCliphistImgCache": true,
+  "country": "IN",
+  "showAudioVisuals": true,
+  "showSensitiveInfo": true,
+  "pillModules": [
+    "battery",
+    "volume",
+    "workspaces",
+    "network",
+    "clock"
+  ],
+  "bandwidthRefreshInterval": 300000
 }
