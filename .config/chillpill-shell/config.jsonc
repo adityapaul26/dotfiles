@@ -13,7 +13,7 @@
     30
   ],
   "mediaPopupDuration": 2000,
-  "maxWorkspaces": 5,
+  "maxWorkspaces": 3,
   "notificationDisplayTime": 3000,
   "maxNotificationsInStack": 20,
   "dataUsageRefreshInterval": 300000,
@@ -26,7 +26,7 @@
   "defaultTerminal": "kitty",
   "pillScale": 1.2,
   "dpiScale": 1.0,
-  "wallpapersDir": "~/Pictures/wallpapers",
+  "wallpapersDir": "/home/aditya/shared/walls",
   "wsCloseOnWallpaperSet": true,
   "wsAnimation": true,
   "deleteCliphistImgCache": true,
