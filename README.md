@@ -6,7 +6,7 @@
 
 [![OS: Arch Linux](https://img.shields.io/badge/OS-Arch%20Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://archlinux.org/)
 [![WM: Hyprland](https://img.shields.io/badge/WM-Hyprland-39A7AC?style=for-the-badge&logo=hyprland&logoColor=white)](https://hyprland.org/)
-[![UI: ChillPill Shell](https://img.shields.io/badge/UI-ChillPill%20Shell-7AA2F7?style=for-the-badge&logo=gnome-terminal&logoColor=white)](#-status-bar--desktop-shell-transition)
+[![UI: ChillPill Shell](https://img.shields.io/badge/UI-ChillPill%20Shell-7AA2F7?style=for-the-badge&logo=gnome-terminal&logoColor=white)](https://github.com/LUCKYS1NGHH/ChillPill-Shell)
 [![Shell: Fish](https://img.shields.io/badge/Shell-Fish-00A6FF?style=for-the-badge&logo=fish&logoColor=white)](https://fishshell.com/)
 [![Terminal: Kitty](https://img.shields.io/badge/Terminal-Kitty-FC5656?style=for-the-badge&logo=kitty&logoColor=white)](https://sw.kovidgoyal.net/kitty/)
 [![Editor: Neovim](https://img.shields.io/badge/Editor-Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)](https://neovim.io/)
@@ -29,7 +29,7 @@ Welcome to my personal **dotfiles**! This repository houses the configuration fo
 
 > [!IMPORTANT]
 > ### 💊 Status Bar & Desktop Shell Transition
-> I have migrated my primary desktop shell and status bar to **[ChillPill Shell](https://github.com/adityapaul26/dotfiles/tree/main/.config/chillpill-shell)** (`chillpill-shell`), an interactive Quickshell-powered UI providing dynamic top pill widgets, control center, clipboard history viewer, and mini-dashboard.
+> I have migrated my primary desktop shell and status bar to **[ChillPill Shell](https://github.com/LUCKYS1NGHH/ChillPill-Shell)** (`chillpill-shell`), an interactive Quickshell-powered UI providing dynamic top pill widgets, control center, clipboard history viewer, and mini-dashboard.
 >
 > 💡 **Prefer Waybar?** My complete and battle-tested **Waybar + SwayNC** configuration is still maintained and preserved inside [`.config/waybar`](file:///home/aditya/dotfiles/.config/waybar) and [`.config/swaync`](file:///home/aditya/dotfiles/.config/swaync) for anyone who wants a traditional status bar experience.
 
@@ -64,7 +64,7 @@ Welcome to my personal **dotfiles**! This repository houses the configuration fo
 | Component | Software | Description | Status |
 | :--- | :--- | :--- | :--- |
 | **Window Manager** | [Hyprland](https://hyprland.org/) | Dynamic Wayland compositor (Lua-configured) | **Active** |
-| **Desktop Shell** | [ChillPill Shell](https://github.com/adityapaul26/dotfiles) | Modern interactive Quickshell bar & widgets | **Primary** |
+| **Desktop Shell** | [ChillPill Shell](https://github.com/LUCKYS1NGHH/ChillPill-Shell) | Modern interactive Quickshell bar & widgets | **Primary** |
 | **Status Bar (Fallback)**| [Waybar](https://github.com/Alexays/Waybar) | Highly customized CSS-styled status bar | *Preserved* |
 | **Terminal Emulator** | [Kitty](https://sw.kovidgoyal.net/kitty/) & [Foot](https://codeberg.org/dnkl/foot) | GPU-accelerated & lightweight Wayland terminals | **Active** |
 | **Shell** | [Fish](https://fishshell.com/) & [Starship](https://starship.rs/) | Modular shell with intelligent prompt | **Active** |
@@ -73,7 +73,7 @@ Welcome to my personal **dotfiles**! This repository houses the configuration fo
 | **Screen Recorder** | [GPU Screen Recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) | Low-overhead capture & instant replay buffer | **Active** |
 | **File Managers** | [Yazi](https://github.com/sxyazi/yazi) / [Fyzenor](https://github.com/adityapaul26/dotfiles) / Dolphin | Terminal & GUI file exploration | **Active** |
 | **Lockscreen & Idle** | [Hyprlock](https://github.com/hyprwm/hyprlock) & [Hypridle](https://github.com/hyprwm/hypridle) | Dynamic lockscreen with music widget support | **Active** |
-| **Notification Center**| [ChillPill](https://github.com/adityapaul26/dotfiles) / [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Wayland notification stack & control panel | **Active** |
+| **Notification Center**| [ChillPill](https://github.com/LUCKYS1NGHH/ChillPill-Shell) / [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Wayland notification stack & control panel | **Active** |
 | **Audio Visualizer** | [Cava](https://github.com/karlstav/cava) | Audio visualizer with custom shaders | **Active** |
 
 ---
@@ -194,7 +194,7 @@ qs ipc -p /usr/share/chillpill-shell call wallpaperSwitcher toggle
 ## 🤝 Acknowledgements & Credits
 
 - [Hyprland](https://hyprland.org/) by Vaxry and the Hyprland team
-- [ChillPill Shell](https://github.com/adityapaul26/dotfiles) for the desktop shell & dynamic widgets
+- [ChillPill Shell](https://github.com/LUCKYS1NGHH/ChillPill-Shell) for the desktop shell & dynamic widgets
 - [Matugen](https://github.com/InSyncWithQueries/matugen) for Material You dynamic theming
 - [LazyVim](https://www.lazyvim.org/) for the Neovim starter configuration
 - [Waybar](https://github.com/Alexays/Waybar) & [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) for classic status bar & notification tooling

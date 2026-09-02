@@ -27,6 +27,7 @@
   "pillScale": 1.2,
   "dpiScale": 1.0,
   "wallpapersDir": "/home/aditya/shared/walls",
+  "customWallpaperScript": "",
   "wsCloseOnWallpaperSet": true,
   "wsAnimation": true,
   "deleteCliphistImgCache": true,
