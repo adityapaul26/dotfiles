@@ -3,6 +3,14 @@
   "clockFormat": "hh:mm",
   "pillTopMargin": 9,
   "pillBottomMargin": 30,
+  "pillModules": [
+    "battery",
+    "volume",
+    "workspaces",
+    "network",
+    "clock"
+  ],
+  "pillOnHover": false,
   "textFontFamily": "Monocraft",
   "nerdFontFamily": "JetBrainsMono Nerd Font Propo",
   "timerPresets": [
@@ -34,12 +42,5 @@
   "country": "IN",
   "showAudioVisuals": true,
   "showSensitiveInfo": true,
-  "pillModules": [
-    "battery",
-    "volume",
-    "workspaces",
-    "network",
-    "clock"
-  ],
   "bandwidthRefreshInterval": 300000
 }
