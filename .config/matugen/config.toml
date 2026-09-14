@@ -3,9 +3,9 @@
 set = true
 
 # The base command to run for applying the wallpaper, shouldn't have spaces in it.
-command = "swww"
+command = "awww"
 
-backend = "swww"
+backend = "awww"
 
 # The arguments that will be provided to the command.
 # Keywords like {{ mode }} or anything that works inside of hooks doesn't work here.
@@ -29,7 +29,7 @@ output_path = '~/.config/rofi/colors.rasi'
 [templates.waybar]
 input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar'
+# post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.wlogout]
 input_path = '~/.config/matugen/templates/colors.css'
