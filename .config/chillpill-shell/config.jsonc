@@ -3,11 +3,23 @@
   "clockFormat": "hh:mm",
   "pillTopMargin": 9,
   "pillBottomMargin": 30,
-  "pillModules": ["battery", "volume", "workspaces", "network", "clock"],
+  "pillModules": [
+    "battery",
+    "volume",
+    "workspaces",
+    "network",
+    "clock"
+  ],
   "pillOnHover": false,
   "textFontFamily": "Monocraft",
   "nerdFontFamily": "JetBrainsMono Nerd Font Propo",
-  "timerPresets": [1, 5, 10, 15, 30],
+  "timerPresets": [
+    1,
+    5,
+    10,
+    15,
+    30
+  ],
   "mediaPopupDuration": 2000,
   "maxWorkspaces": 3,
   "notificationDisplayTime": 3000,
@@ -30,5 +42,8 @@
   "country": "IN",
   "showAudioVisuals": true,
   "showSensitiveInfo": true,
+  "confirmPowerActions": true,
+  "maxVolume": 100,
+  "separatePreviewTabTypes": true,
   "bandwidthRefreshInterval": 300000
 }
