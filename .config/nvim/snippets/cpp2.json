@@ -1,0 +1,39 @@
+{
+  "CP Template": {
+    "prefix": "cf",
+    "body": [
+      "/*",
+      " * by - Aditya Paul",
+      " */",
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "using ll = long long;",
+      "using vi = vector<int>;",
+      "using vll = vector<ll>;",
+      "",
+      "#define all(x) (x).begin(), (x).end()",
+      "",
+      "void solve() {",
+      "    $0",
+      "}",
+      "",
+      "int main() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "",
+      "#ifndef ONLINE_JUDGE",
+      "    freopen(\"input.txt\", \"r\", stdin);",
+      "    freopen(\"output.txt\", \"w\", stdout);",
+      "#endif",
+      "",
+      "    int t;",
+      "    cin >> t;",
+      "    while (t--) solve();",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Minimal CP Template with File I/O"
+  }
+}
