@@ -80,50 +80,50 @@ Welcome to my personal **dotfiles**! This repository houses the configuration fo
 
 ## ⌨️ Keybindings
 
-The `SUPER` key (`Windows` key) is the primary modifier across the entire environment.
+The <kbd>SUPER</kbd> key (<kbd>Windows</kbd> key) is the primary modifier across the entire environment.
 
 ### 💊 ChillPill Shell & Desktop Controls
 | Keybinding | Action |
 | :--- | :--- |
-| `SUPER + R` | Toggle ChillPill App Launcher |
-| `SUPER + SHIFT + V` | Toggle ChillPill Cliphist Clipboard History |
-| `SUPER + X` | Toggle ChillPill Control Center |
-| `SUPER + B` | Toggle ChillPill Mini Dashboard |
-| `SUPER + W` | Toggle ChillPill Wallpaper Switcher |
+| <kbd>SUPER</kbd> + <kbd>R</kbd> | Toggle ChillPill App Launcher |
+| <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>V</kbd> | Toggle ChillPill Cliphist Clipboard History |
+| <kbd>SUPER</kbd> + <kbd>X</kbd> | Toggle ChillPill Control Center |
+| <kbd>SUPER</kbd> + <kbd>B</kbd> | Toggle ChillPill Mini Dashboard |
+| <kbd>SUPER</kbd> + <kbd>W</kbd> | Toggle ChillPill Wallpaper Switcher |
 
 ### 🪟 Window Management & Navigation
 | Keybinding | Action |
 | :--- | :--- |
-| `SUPER + Q` | Launch Terminal (Kitty) |
-| `SUPER + E` | Open File Manager (Dolphin) |
-| `SUPER + C` | Close Active Window |
-| `SUPER + V` | Toggle Floating Window Mode |
-| `SUPER + P` | Toggle Pseudo Tiling |
-| `SUPER + M` | Exit Hyprland Session |
-| `SUPER + [Arrow Keys]` | Move Focus (Left, Right, Up, Down) |
-| `SUPER + [1-0]` | Switch to Workspace `1`–`10` |
-| `SUPER + SHIFT + [1-0]` | Move Active Window to Workspace `1`–`10` |
-| `SUPER + S` | Toggle Special Workspace (Scratchpad) |
-| `SUPER + SHIFT + S` | Move Window to Special Workspace |
-| `SUPER + Mouse Scroll` | Cycle Through Workspaces |
-| `SUPER + LMB (Drag)` | Move Window |
-| `SUPER + RMB (Drag)` | Resize Window |
+| <kbd>SUPER</kbd> + <kbd>Q</kbd> | Launch Terminal (Kitty) |
+| <kbd>SUPER</kbd> + <kbd>E</kbd> | Open File Manager (Dolphin) |
+| <kbd>SUPER</kbd> + <kbd>C</kbd> | Close Active Window |
+| <kbd>SUPER</kbd> + <kbd>V</kbd> | Toggle Floating Window Mode |
+| <kbd>SUPER</kbd> + <kbd>P</kbd> | Toggle Pseudo Tiling |
+| <kbd>SUPER</kbd> + <kbd>M</kbd> | Exit Hyprland Session |
+| <kbd>SUPER</kbd> + <kbd>Arrow Keys</kbd> | Move Focus (Left, Right, Up, Down) |
+| <kbd>SUPER</kbd> + <kbd>1</kbd>–<kbd>0</kbd> | Switch to Workspace `1`–`10` |
+| <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>1</kbd>–<kbd>0</kbd> | Move Active Window to Workspace `1`–`10` |
+| <kbd>SUPER</kbd> + <kbd>S</kbd> | Toggle Special Workspace (Scratchpad) |
+| <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>S</kbd> | Move Window to Special Workspace |
+| <kbd>SUPER</kbd> + <kbd>Mouse Scroll</kbd> | Cycle Through Workspaces |
+| <kbd>SUPER</kbd> + <kbd>LMB</kbd> (Drag) | Move Window |
+| <kbd>SUPER</kbd> + <kbd>RMB</kbd> (Drag) | Resize Window |
 
 ### 🎥 Media, Screen Recording & Utilities
 | Keybinding | Action |
 | :--- | :--- |
-| `PRINT` | Screenshot active window (`hyprshot`) |
-| `SHIFT + PRINT` | Screenshot selected region (`hyprshot`) |
-| `SUPER + G` | Toggle GPU Screen Recorder |
-| `SUPER + SHIFT + G` | Toggle GPU Screen Recorder with Microphone |
-| `SUPER + CTRL + G` | Pause GPU Screen Recorder |
-| `SUPER + F8` | Save Instant Replay (Past 10 seconds) |
-| `SUPER + F9` | Save Instant Replay (Past 30 seconds) |
-| `SUPER + F10` | Save Instant Replay (Past 60 seconds) |
-| `XF86AudioRaiseVolume` | Volume Up (`wpctl` / `swayosd`) |
-| `XF86AudioLowerVolume` | Volume Down (`wpctl` / `swayosd`) |
-| `XF86AudioMute` | Mute Audio Sink |
-| `XF86MonBrightnessUp/Down` | Adjust Screen Brightness (`brightnessctl`) |
+| <kbd>PRINT</kbd> | Screenshot active window (`hyprshot`) |
+| <kbd>SHIFT</kbd> + <kbd>PRINT</kbd> | Screenshot selected region (`hyprshot`) |
+| <kbd>SUPER</kbd> + <kbd>G</kbd> | Toggle GPU Screen Recorder |
+| <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>G</kbd> | Toggle GPU Screen Recorder with Microphone |
+| <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>G</kbd> | Pause GPU Screen Recorder |
+| <kbd>SUPER</kbd> + <kbd>F8</kbd> | Save Instant Replay (Past 10 seconds) |
+| <kbd>SUPER</kbd> + <kbd>F9</kbd> | Save Instant Replay (Past 30 seconds) |
+| <kbd>SUPER</kbd> + <kbd>F10</kbd> | Save Instant Replay (Past 60 seconds) |
+| <kbd>XF86AudioRaiseVolume</kbd> | Volume Up (`wpctl` / `swayosd`) |
+| <kbd>XF86AudioLowerVolume</kbd> | Volume Down (`wpctl` / `swayosd`) |
+| <kbd>XF86AudioMute</kbd> | Mute Audio Sink |
+| <kbd>XF86MonBrightnessUp</kbd> / <kbd>XF86MonBrightnessDown</kbd> | Adjust Screen Brightness (`brightnessctl`) |
 
 ---
 

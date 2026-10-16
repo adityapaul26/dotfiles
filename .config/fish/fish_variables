@@ -2,4 +2,9 @@
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:
-SETUVAR fish_user_paths:/opt/homebrew/bin\x1e/opt/homebrew/sbin\x1e/home/aditya/\x2enpm\x2dglobal/bin\x1e/home/aditya/\x2elocal/bin
+
+# Linux
+# SETUVAR fish_user_paths:/opt/homebrew/bin\x1e/opt/homebrew/sbin\x1e/home/aditya/\x2enpm\x2dglobal/bin\x1e/home/aditya/\x2elocal/bin
+
+# macOS
+SETUVAR fish_user_paths:/Users/aditya/\x2elocal/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/sbin\x1e/home/aditya/\x2enpm\x2dglobal/bin\x1e/home/aditya/\x2elocal/bin
